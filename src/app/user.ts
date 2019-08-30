@@ -1,6 +1,6 @@
 export class User {
-    constructor(public username:string,
-        public fullName:string,
-        public profile:string,
-        public repoNumber:number){}
+    constructor(public login:string,
+        public name:string,
+        public avatar_url:string,
+        public public_repos:number){}
 }
