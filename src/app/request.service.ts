@@ -2,15 +2,18 @@ import { Injectable } from '@angular/core';
 import { User } from './user';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Repository } from './repository';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class RequestService {
 	user: User;
+  repository: any;
 
 	constructor(private http: HttpClient) {
-		this.user = new User('', '', '', 0,new Date());
+    this.user = new User('', '', '', 0,new Date());
+    this.repository = new Repository('', '', '', new Date());
 	}
 	githubRequest() {
 		interface ApiResponse {
@@ -41,6 +44,7 @@ export class RequestService {
 						reject(error);
 					}
 				);
-		});
+    });
+    return promise;
 	}
 }

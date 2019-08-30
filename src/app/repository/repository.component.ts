@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepositoryComponent implements OnInit {
 
-  constructor() { }
+  // repository: Repository;
+  //   public searchRepo: string;
+  //   public resultCount = 12;
 
-  ngOnInit() {
+  //   searchRepos() {
+  //       this.searchRepo = '';
+  //       this.resultCount = 10;
+  //       this.getDataFunction();
+
+  //   }
+
+  //   constructor(public gitRepoRequest: SearchRequestService ) { }
+
+  // ngOnInit() {
+  //       this.resultCount = 5;
+  //     this.gitRepoRequest.gitRepos(this.searchRepo);
+  // }
+
+
+  //     getDataFunction() {
+  //         this.gitRepoRequest.gitRepos(this.searchRepo);
+
+  //     }
+  ngOnInit(){
+    
   }
 
 }
