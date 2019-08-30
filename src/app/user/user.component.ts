@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { HttpClient } from '@angular/common/http';
+import { RequestService } from '../request.service';
 
 @Component({
   selector: 'app-user',
@@ -12,10 +13,13 @@ export class UserComponent implements OnInit {
   // users:User[];
   user: User;
 
-  constructor(private Re) {
+  constructor(private githubRequestService:RequestService) {
+    this.githubRequestService=githubRequestService;
    }
 
   ngOnInit() {
+    this.githubRequestService.githubRequest()
+    this.user=this.githubRequestService.user
     
     // interface ApiResponse{
     //   login:string;
