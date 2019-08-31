@@ -1,14 +1,18 @@
 <div class="row">
     <div class="col-md-6">
-        <div><label for="profile">Profile:</label></div>
+        <!-- <div><label for="profile">Profile:</label></div> -->
+        <div><h3 class="list-group-item">Profile:</h3></div>
         
         <img src="{{user.avatar_url}}" alt="" width="300">
+        <div></div>
     </div>
     <div class="col-md-6">
-        <p>UserName:{{user.login}}</p>
-        <p>Name:{{user.name}}</p>
+        <p class="list-group-item">UserName:{{user.login}}</p>
+        <p class="list-group-item">Name:{{user.name}}</p>
         <!-- <p>Profile:{{user.avatar_url}}</p> -->
-        <p>Repositories:{{user.public_repos}}</p>
-        <p>Created at:{{user.created_at|date}}</p>
+        <p class="list-group-item">Repositories:{{user.public_repos}}</p>
+        <p class="list-group-item">Created at:{{user.created_at|date}}</p>
+        <p class="list-group-item"><a href="{{user.html_url}}" target="_blank" class="list-group-item list-group-item-action active">View
+                them in profile</a></p>
     </div>
 </div>

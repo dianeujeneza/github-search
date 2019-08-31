@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Repository } from '../repository';
+import { RequestService } from '../request.service';
 
 @Component({
   selector: 'app-repository',
@@ -7,31 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepositoryComponent implements OnInit {
 
-  // repository: Repository;
-  //   public searchRepo: string;
-  //   public resultCount = 12;
+  repository: Repository;
+    public searchRepo: string;
+    public resultCount = 12;
 
-  //   searchRepos() {
-  //       this.searchRepo = '';
-  //       this.resultCount = 10;
-  //       this.getDataFunction();
+    searchRepos() {
+        this.searchRepo = '';
+        this.resultCount = 10;
+        this.getDataFunction();
 
-  //   }
+    }
 
-  //   constructor(public gitRepoRequest: SearchRequestService ) { }
+    constructor(public gitRepoRequest: RequestService ) { }
 
-  // ngOnInit() {
-  //       this.resultCount = 5;
-  //     this.gitRepoRequest.gitRepos(this.searchRepo);
-  // }
-
-
-  //     getDataFunction() {
-  //         this.gitRepoRequest.gitRepos(this.searchRepo);
-
-  //     }
-  ngOnInit(){
-    
+  ngOnInit() {
+        this.resultCount = 5;
+      this.gitRepoRequest.gitRepos(this.searchRepo);
   }
 
+
+      getDataFunction() {
+          this.gitRepoRequest.gitRepos(this.searchRepo);
+
+      }
 }

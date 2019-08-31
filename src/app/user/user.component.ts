@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { HttpClient } from '@angular/common/http';
 import { RequestService } from '../request.service';
+import { ActivatedRoute, ParamMap } from "@angular/router";
 
 @Component({
   selector: 'app-user',
@@ -12,14 +13,32 @@ export class UserComponent implements OnInit {
 
   // users:User[];
   user: User;
+  searchName:string;
+  repos: any;
 
-  constructor(private githubRequestService:RequestService) {
-    this.githubRequestService=githubRequestService;
+  constructor(private githubRequestService:RequestService, 
+    public userRepos: RequestService,private route:ActivatedRoute) {
+    // this.githubRequestService=githubRequestService;
    }
+//   constructor(private githubService:RequestService, private http: HttpClient){
+// this.githubService.gitUser().subscribe(user =>{
+//   this.user=user;
+// });
+// this.githubService.gitRepos().subscribe(repos =>{
+//   this.repos = repos;
+// });
+//   }
 
   ngOnInit() {
-    this.githubRequestService.githubRequest()
+    let username = this.route.snapshot.paramMap.get('username')
+    this.githubRequestService.githubRequest(this.searchName)
     this.user=this.githubRequestService.user
+    // this.githubRequestService.gitRepos(this.searchName)
+    // this.user=this.githubRequestService.user
+    // this.githubRequestService.githubRequest(this.searchName);
+    //   this.user = this.githubRequestService.user;
+    //   this.userRepos.gitRepos(this.searchName);
+      // console.log(this.userRepos);
     
     // interface ApiResponse{
     //   login:string;

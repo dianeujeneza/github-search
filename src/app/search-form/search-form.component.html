@@ -1,8 +1,19 @@
-<form action="">
+<form (ngSubmit)="search()" #searchForm="ngForm">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Enter Github Username or Github Repository">
+        <input type="text" class="form-control" name="find" placeholder="Enter Github Username or Github Repository" [(ngModel)]= "searchName"  #find='ngModel'>
     </div>
     <div class="form-group">
-        <button class="btn btn-warning">Search</button>
+        <button class="btn btn-warning" (click)='goToUrl(find.value)'>Search</button>
     </div>
+    <!-- <div>
+            <p>{{website.login}}</p>
+            <img src={{website.avatar_url}}>
+            <p>{{website.date}}</p>
+        
+            <div *ngFor="let rep of repo">
+                <p>{{rep.repoName}}</p> 
+                <p>{{rep.description}}</p>
+            </div>
+        
+        </div> -->
 </form>
