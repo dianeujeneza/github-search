@@ -30,8 +30,8 @@ export class UserComponent implements OnInit {
 //   }
 
   ngOnInit() {
-    let username = this.route.snapshot.paramMap.get('username')
-    this.githubRequestService.githubRequest(this.searchName)
+    let searchName = this.route.snapshot.paramMap.get('searchName')
+    this.githubRequestService.githubRequest(searchName)
     this.user=this.githubRequestService.user
     // this.githubRequestService.gitRepos(this.searchName)
     // this.user=this.githubRequestService.user

@@ -6,7 +6,7 @@ import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   { path: 'search-form', component: SearchFormComponent},
-  { path: 'user', component: UserComponent},
+  { path: 'user/:username', component: UserComponent},
 ];
 
 @NgModule({
