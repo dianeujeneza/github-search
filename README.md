@@ -12,7 +12,7 @@ No setups and installation is required for this application but there will be re
 ## Behavior Driven Development(BDD)
 *It takes user's inputs informations then gives them what they requested
 
-*INPUTS: github username or github repository 
+*INPUTS: github username or github repository names.
 
 *OUTPUTS:users will get needed informations according to their inputs.
 ## Known Bugs
