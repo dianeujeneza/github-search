@@ -14,7 +14,7 @@ No setups and installation is required for this application but there will be re
 
 *INPUTS: github username or github repository name.
 
-*OUTPUTS:users will get needed informations according to their inputs.
+*OUTPUTS:users will get needed informations according to their 
 ## Known Bugs
 Bugs occurs when informations are not well inserted as required
 ## Technologies Used
