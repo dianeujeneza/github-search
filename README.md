@@ -23,4 +23,4 @@ HTML,CSS,BOOTSRAP and JAVASCRIPT,ANGULARJS
 If countered a problem please don't hesitate to email me on dianesis@gmail.com.
 ### License
 [UMD]
-Copyright (c) {2019} Diane Ujeneza
+Copyright (c) {2019} Diane Ujeneza.
