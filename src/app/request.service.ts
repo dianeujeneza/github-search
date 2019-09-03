@@ -64,7 +64,7 @@ export class RequestService {
     }
 
     let Repromise = new Promise((resolve, reject) => {
-        this.http.get<ApiResponse>('https://api.github.com/search/repos?q=' + searchName + ' &per_page=10 ' + environment.key)
+        this.http.get<ApiResponse>('https://api.github.com/search/repos?q=' + searchName + ' &per_page=10 ' + this.key)
         .toPromise().then(response => 
         {for(var i in response){
 
