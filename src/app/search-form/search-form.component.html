@@ -1,6 +1,6 @@
 <form #searchForm="ngForm">
     <div class="form-group">
-        <input type="text" class="form-control" name="find" placeholder="Enter Github Username or Github Repository" [(ngModel)]= "searchName"  #find='ngModel'>
+        <input type="text" class="form-control" name="find" placeholder="Enter Github Username or Github Repository" >
     </div>
     <div class="form-group">
         <button class="btn btn-warning" (click)='goToUrl(find.value)'>Search</button>
