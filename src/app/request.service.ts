@@ -14,6 +14,8 @@ export class RequestService {
   searchRepo: any;
   repos:Repository[];
   website:Search;
+  private key:String="11efeb41d8cea16ae17280f29f43c45edd949733";
+
 
 	constructor(private http: HttpClient) {
     this.user = new User('', '', '',0,'',new Date());
@@ -32,7 +34,7 @@ export class RequestService {
 		let promise = new Promise((resolve, reject) => {
 			this.http
         .get<ApiResponse>
-        ('https://api.github.com/users/'+ searchName +'?access_token=' + environment.key)
+        ('https://api.github.com/users/'+ searchName +'?access_token=' + this.key)
         // ('https://api.github.com/users/dianeujeneza?access_token='+ environment.key)
 				.toPromise()
 				.then(
