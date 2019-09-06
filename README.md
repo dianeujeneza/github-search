@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
-# Pizza world
+# GithubSearch
 #### This is a Github research application, 31/08/2019
 #### By Diane Ujeneza
 ## Description
